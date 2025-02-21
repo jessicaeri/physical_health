@@ -19,7 +19,7 @@ class PhysicalhealthsController < ApplicationController
     physhlth = PhysicalHealth.find(params[:id])
     physhlth.update(
       types: params[:types] || physhlth.types
-    )
+    ) #plan_name is a better column title
     render json: physhlth
   end
 
