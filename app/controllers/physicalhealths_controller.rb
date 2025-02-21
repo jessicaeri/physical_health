@@ -11,14 +11,14 @@ class PhysicalhealthsController < ApplicationController
   end
 
   def create
-    physhlth = PhysicalHealth.create(types: params[:name])
+    physhlth = PhysicalHealth.create(types: params[:types])
     render json: physhlth
   end
 
   def update
     physhlth = PhysicalHealth.find(params[:id])
     physhlth.update(
-      name: params[:name] || physhlth.types
+      types: params[:types] || physhlth.types
     )
     render json: physhlth
   end
