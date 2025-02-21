@@ -18,7 +18,7 @@ class WorkoutsController < ApplicationController
   def update
     workout = Workout.find(params[:id])
     workout.update(
-      name: params[:name] || workout.types
+      name: params[:name] || workout.name
     )
     render json: workout
   end

@@ -11,5 +11,9 @@ Rails.application.routes.draw do
   patch "/workouts/:id" => "workouts#update"
   delete "/workouts/:id" => "workouts#destroy"
 
-
+  get "/exercises" => "exercises#index"
+  get "/exercises/:id" => "exercises#show"
+  post "/exercises" => "exercises#create"
+  patch "/exercises/:id" => "exercises#update"
+  delete "/exercises/:id" => "exercises#destroy"
 end
