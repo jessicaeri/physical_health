@@ -13,9 +13,8 @@ class ExercisesController < ApplicationController
   def create
     exercise = Exercise.create(
       name: params[:name],
-      #add weight(lbs)
       sets: params[:sets],
-      reps: params[:reps] #target reps
+      reps: params[:reps]
       )
     render json: exercise
   end
