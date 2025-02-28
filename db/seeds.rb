@@ -17,8 +17,8 @@
 # Exercise.create(name: "Tricep Pull Downs",sets:3, reps: 12, workout_id: 1)
 
 require 'faker'
-PhysicalHealth.create(types: "Jess")
-Workout.create(name: "Weight Training", physical_health_id: 1)
+PhysicalHealth.create!(types: "Jess")
+Workout.create!(name: "Weight Training", physical_health_id: 1)
 
 10.times do 
   Exercise.create!(name: Faker::Sport.sport, sets: Faker::Number.between(from: 1, to: 5), reps: Faker::Number.between(from: 1, to: 15), workout_id: 1)
